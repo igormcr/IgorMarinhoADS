@@ -1,0 +1,66 @@
+﻿@model IgorMarinho_WebApp.acc_trans
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>acc_trans</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.acc_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acc_id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trans_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trans_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trans_value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trans_value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trans_reg_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trans_reg_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trans_rem_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trans_rem_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.repeat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.repeat)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.trans_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Accounts)">
+        <MappingFragment StoreEntitySet="Accounts">
+          <ScalarProperty Name="acc_id" ColumnName="acc_id" />
+          <ScalarProperty Name="acc_name" ColumnName="acc_name" />
+          <ScalarProperty Name="ins_total" ColumnName="ins_total" />
+          <ScalarProperty Name="outs_total" ColumnName="outs_total" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reminders">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.reminder)">
+        <MappingFragment StoreEntitySet="reminders">
+          <ScalarProperty Name="reminder_id" ColumnName="reminder_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="rem_date" ColumnName="rem_date" />
+          <ScalarProperty Name="repeat" ColumnName="repeat" />
+          <ScalarProperty Name="fullname" ColumnName="fullname" />
+          <ScalarProperty Name="acc_name" ColumnName="acc_name" />
+          <ScalarProperty Name="in_id" ColumnName="in_id" />
+          <ScalarProperty Name="out_id" ColumnName="out_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="reports">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.report)">
+        <MappingFragment StoreEntitySet="reports">
+          <ScalarProperty Name="report_id" ColumnName="report_id" />
+          <ScalarProperty Name="trans_id" ColumnName="trans_id" />
+          <ScalarProperty Name="trans_name" ColumnName="trans_name" />
+          <ScalarProperty Name="trans_value" ColumnName="trans_value" />
+          <ScalarProperty Name="trans_reg_date" ColumnName="trans_reg_date" />
+          <ScalarProperty Name="trans_rem_date" ColumnName="trans_rem_date" />
+          <ScalarProperty Name="repeat" ColumnName="repeat" />
+          <ScalarProperty Name="acc_id" ColumnName="acc_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="acc_name" ColumnName="acc_name" />
+          <ScalarProperty Name="ins_total" ColumnName="ins_total" />
+          <ScalarProperty Name="outs_total" ColumnName="outs_total" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="acc_trans">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.acc_trans)">
+        <MappingFragment StoreEntitySet="acc_trans">
+          <ScalarProperty Name="trans_id" ColumnName="trans_id" />
+          <ScalarProperty Name="acc_id" ColumnName="acc_id" />
+          <ScalarProperty Name="trans_name" ColumnName="trans_name" />
+          <ScalarProperty Name="trans_value" ColumnName="trans_value" />
+          <ScalarProperty Name="trans_reg_date" ColumnName="trans_reg_date" />
+          <ScalarProperty Name="trans_rem_date" ColumnName="trans_rem_date" />
+          <ScalarProperty Name="repeat" ColumnName="repeat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,58 @@
+﻿@model IgorMarinho_WebApp.Accounts
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Accounts</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.acc_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.acc_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trans)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trans)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ins_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ins_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.outs_total)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.outs_total)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.user_id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.user_id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.acc_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
