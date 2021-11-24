@@ -25,7 +25,7 @@
         </footer>
     </div>
 
-    <h2>Todos de Usuários</h2>
+    <h2>Painel de Usuários</h2>
     <form id="form1" runat="server">
 
         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [AspNetUsers]"></asp:SqlDataSource>
@@ -69,9 +69,9 @@
             </Columns>
         </asp:GridView>
         <br />
-        <h2>Todas as Contas de Todos Clientes</h2>
+        <h2>Todas as Contas de Todos os Clientes</h2>
         <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Clientes]"></asp:SqlDataSource>
-        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="id_conta" DataSourceID="SqlDataSource3">
+        <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="id_conta" DataSourceID="SqlDataSource3" AllowPaging="True" AllowSorting="True">
             <Columns>
                 <asp:BoundField DataField="id_conta" HeaderText="id_conta" InsertVisible="False" ReadOnly="True" SortExpression="id_conta" />
                 <asp:BoundField DataField="nome_conta" HeaderText="nome_conta" SortExpression="nome_conta" />
@@ -81,7 +81,21 @@
                 <asp:BoundField DataField="tipo_conta" HeaderText="tipo_conta" SortExpression="tipo_conta" />
             </Columns>
         </asp:GridView>
+        <br />
+        <br />
+        <h2>Todas as Contas de Um Cliente</h2>
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT * FROM [Contas]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView4" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id_cliente" DataSourceID="SqlDataSource4">
+            <Columns>
+                <asp:BoundField DataField="id_cliente" HeaderText="id_cliente" InsertVisible="False" ReadOnly="True" SortExpression="id_cliente" />
+                <asp:BoundField DataField="nome_cliente" HeaderText="nome_cliente" SortExpression="nome_cliente" />
+                <asp:BoundField DataField="nome_conta" HeaderText="nome_conta" SortExpression="nome_conta" />
+                <asp:BoundField DataField="numero_conta" HeaderText="numero_conta" SortExpression="numero_conta" />
+                <asp:BoundField DataField="saldo" HeaderText="saldo" SortExpression="saldo" />
+                <asp:BoundField DataField="tipo_conta" HeaderText="tipo_conta" SortExpression="tipo_conta" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT Clientes.id_cliente, Contas.id_cliente AS Expr1, Clientes.nome_cliente, Contas.nome_conta, Contas.numero_conta, Contas.saldo, Contas.tipo_conta FROM Clientes INNER JOIN Contas ON Clientes.id_cliente = Contas.id_cliente"></asp:SqlDataSource>
     </form>
 </body>
 </html>

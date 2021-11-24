@@ -47,7 +47,7 @@ namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create([Bind(Include = "id_conta,nome_conta,numero_conta,id_usuario,saldo,tipo_conta")] Contas contas)
+        public async Task<ActionResult> Create([Bind(Include = "id_conta,nome_conta,numero_conta,id_cliente,saldo,tipo_conta")] Contas contas)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit([Bind(Include = "id_conta,nome_conta,numero_conta,id_usuario,saldo,tipo_conta")] Contas contas)
+        public async Task<ActionResult> Edit([Bind(Include = "id_conta,nome_conta,numero_conta,id_cliente,saldo,tipo_conta")] Contas contas)
         {
             if (ModelState.IsValid)
             {
