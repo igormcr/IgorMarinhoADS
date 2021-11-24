@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Contas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ContasContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Contas" EntityType="Contas.Contas" />
+  </EntityContainer>
+  <EntityType Name="Contas">
+    <Key>
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="id_conta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome_conta" Type="String" Nullable="false" />
+    <Property Name="numero_conta" Type="String" Nullable="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+    <Property Name="saldo" Type="Int32" Nullable="false" />
+    <Property Name="tipo_conta" Type="String" Nullable="false" />
+  </EntityType>
+</Schema>

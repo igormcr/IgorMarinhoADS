@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContasStoreContainer" CdmEntityContainer="ContasContainer">
+    <EntitySetMapping Name="Contas">
+      <EntityTypeMapping TypeName="IsTypeOf(Contas.Contas)">
+        <MappingFragment StoreEntitySet="Contas">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="nome_conta" ColumnName="nome_conta" />
+          <ScalarProperty Name="numero_conta" ColumnName="numero_conta" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="tipo_conta" ColumnName="tipo_conta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

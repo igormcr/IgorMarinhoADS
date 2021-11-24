@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Contas.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ContasStoreContainer">
+    <EntitySet Name="Contas" EntityType="Contas.Store.Contas" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Contas">
+    <Key>
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="id_conta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_conta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="numero_conta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="saldo" Type="int" Nullable="false" />
+    <Property Name="tipo_conta" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Contas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="ContasContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Contas" EntityType="Contas.Contas" />
+        </EntityContainer>
+        <EntityType Name="Contas">
+          <Key>
+            <PropertyRef Name="id_conta" />
+          </Key>
+          <Property Name="id_conta" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nome_conta" Type="String" Nullable="false" />
+          <Property Name="numero_conta" Type="String" Nullable="false" />
+          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <Property Name="saldo" Type="Int32" Nullable="false" />
+          <Property Name="tipo_conta" Type="String" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ContasStoreContainer" CdmEntityContainer="ContasContainer">
+    <EntitySetMapping Name="Contas">
+      <EntityTypeMapping TypeName="IsTypeOf(Contas.Contas)">
+        <MappingFragment StoreEntitySet="Contas">
+          <ScalarProperty Name="id_conta" ColumnName="id_conta" />
+          <ScalarProperty Name="nome_conta" ColumnName="nome_conta" />
+          <ScalarProperty Name="numero_conta" ColumnName="numero_conta" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+          <ScalarProperty Name="saldo" ColumnName="saldo" />
+          <ScalarProperty Name="tipo_conta" ColumnName="tipo_conta" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

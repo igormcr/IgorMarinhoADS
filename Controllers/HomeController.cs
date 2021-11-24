@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace IgorMarinho_WebApp.Controllers
+namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021.Controllers
 {
     public class HomeController : Controller
     {

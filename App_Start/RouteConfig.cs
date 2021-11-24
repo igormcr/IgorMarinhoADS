@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace IgorMarinho_WebApp
+namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021
 {
     public class RouteConfig
     {

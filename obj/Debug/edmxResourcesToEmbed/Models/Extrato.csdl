@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Extrato" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="ExtratoContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Extratoes" EntityType="Extrato.Extrato" />
+  </EntityContainer>
+  <EntityType Name="Extrato">
+    <Key>
+      <PropertyRef Name="id_extrato" />
+    </Key>
+    <Property Name="id_extrato" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vl_extrato" Type="Int32" Nullable="false" />
+    <Property Name="data_extrato" Type="DateTime" Nullable="false" />
+    <Property Name="id_contas" Type="Int32" Nullable="false" />
+    <Property Name="id_cliente" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

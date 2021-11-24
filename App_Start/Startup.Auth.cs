@@ -5,9 +5,9 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using IgorMarinho_WebApp.Models;
+using WebApplication1_IgorMarinhoCarneiroRodrigues2021.Models;
 
-namespace IgorMarinho_WebApp
+namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021
 {
     public partial class Startup
     {

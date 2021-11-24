@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Contas.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ContasStoreContainer">
+    <EntitySet Name="Contas" EntityType="Contas.Store.Contas" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Contas">
+    <Key>
+      <PropertyRef Name="id_conta" />
+    </Key>
+    <Property Name="id_conta" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nome_conta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="numero_conta" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+    <Property Name="saldo" Type="int" Nullable="false" />
+    <Property Name="tipo_conta" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+</Schema>

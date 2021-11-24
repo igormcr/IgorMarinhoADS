@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Optimization;
 
-namespace IgorMarinho_WebApp
+namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021
 {
     public class BundleConfig
     {

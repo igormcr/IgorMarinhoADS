@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace IgorMarinho_WebApp.Models
+namespace WebApplication1_IgorMarinhoCarneiroRodrigues2021.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
