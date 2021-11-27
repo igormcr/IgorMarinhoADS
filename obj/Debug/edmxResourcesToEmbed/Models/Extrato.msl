@@ -1,6 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-  <Alias Key="Model" Value="Extrato" />
-  <Alias Key="Target" Value="Extrato.Store" />
-  <EntityContainerMapping CdmEntityContainer="ExtratoContainer" StorageEntityContainer="ExtratoTargetContainer" />
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExtratoStoreContainer" CdmEntityContainer="ExtratoContainer">
+    <EntitySetMapping Name="Extratoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Extrato.Extrato)">
+        <MappingFragment StoreEntitySet="Extratoes">
+          <ScalarProperty Name="id_extrato" ColumnName="id_extrato" />
+          <ScalarProperty Name="vl_extrato" ColumnName="vl_extrato" />
+          <ScalarProperty Name="data_extrato" ColumnName="data_extrato" />
+          <ScalarProperty Name="id_contas" ColumnName="id_contas" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
 </Mapping>

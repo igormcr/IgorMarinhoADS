@@ -10,6 +10,6 @@
     <Property Name="id_cliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nome_cliente" Type="String" Nullable="false" />
     <Property Name="numero_cliente" Type="String" Nullable="false" />
-    <Property Name="id_usuario" Type="Int32" Nullable="false" />
+    <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
   </EntityType>
 </Schema>

@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'E:\source\WebApplication1_IgorMarinhoCarneiroRodrigues2021\Models\Extrato.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Usuário\Downloads\IgorMarinhoADS-main(1)\IgorMarinhoADS-main\Models\Extrato.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

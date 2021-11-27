@@ -4,11 +4,21 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="Extrato.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="ExtratoTargetContainer" >
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="Extrato.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ExtratoStoreContainer">
+    <EntitySet Name="Extratoes" EntityType="Extrato.Store.Extratoes" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Extratoes">
+    <Key>
+      <PropertyRef Name="id_extrato" />
+    </Key>
+    <Property Name="id_extrato" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vl_extrato" Type="int" Nullable="false" />
+    <Property Name="data_extrato" Type="datetime" Nullable="false" />
+    <Property Name="id_contas" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
+  </EntityType>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Extrato" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
@@ -29,13 +39,21 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
-        <Alias Key="Model" Value="Extrato" />
-        <Alias Key="Target" Value="Extrato.Store" />
-        <EntityContainerMapping CdmEntityContainer="ExtratoContainer" StorageEntityContainer="ExtratoTargetContainer">
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ExtratoStoreContainer" CdmEntityContainer="ExtratoContainer">
+    <EntitySetMapping Name="Extratoes">
+      <EntityTypeMapping TypeName="IsTypeOf(Extrato.Extrato)">
+        <MappingFragment StoreEntitySet="Extratoes">
+          <ScalarProperty Name="id_extrato" ColumnName="id_extrato" />
+          <ScalarProperty Name="vl_extrato" ColumnName="vl_extrato" />
+          <ScalarProperty Name="data_extrato" ColumnName="data_extrato" />
+          <ScalarProperty Name="id_contas" ColumnName="id_contas" />
+          <ScalarProperty Name="id_cliente" ColumnName="id_cliente" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -49,6 +67,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->
