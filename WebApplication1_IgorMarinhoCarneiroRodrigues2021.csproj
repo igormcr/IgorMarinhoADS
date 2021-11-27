@@ -232,10 +232,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Contas.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Extrato.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extrato.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extrato.cs">
+      <DependentUpon>Extrato.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Extrato.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Extrato.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Extrato1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extrato.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -263,6 +276,7 @@
       <LastGenOutput>Cliente.Context.cs</LastGenOutput>
       <DependentUpon>Cliente.edmx</DependentUpon>
     </Content>
+    <Content Include="Models\Cliente.edmx.sql" />
     <Content Include="Models\Cliente.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Cliente1.cs</LastGenOutput>
@@ -278,6 +292,17 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Contas1.cs</LastGenOutput>
       <DependentUpon>Contas.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Extrato.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Extrato.Context.cs</LastGenOutput>
+      <DependentUpon>Extrato.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Extrato.edmx.sql" />
+    <Content Include="Models\Extrato.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Extrato1.cs</LastGenOutput>
+      <DependentUpon>Extrato.edmx</DependentUpon>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
